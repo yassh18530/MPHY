@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { auth } from "../firebase.js"; // Import Firebase Auth
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth"";
 import { signOut } from "firebase/auth";
 import { FaHome, FaUser, FaStickyNote, FaBook, FaQuestionCircle, FaBriefcase, FaRobot, FaSignOutAlt, FaInfoCircle } from "react-icons/fa";
 
