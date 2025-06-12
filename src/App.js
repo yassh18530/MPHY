@@ -2,17 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase.js"; 
-import Home from "./pages/Home";
-import Notes from "./pages/Notes";
-import MyProfile from "./pages/MyProfile";
-import Chat from "./pages/Chat";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-import JobPreparation from "./pages/JobPreparation";
-import Quiz from "./pages/Quiz";
-import ExamPreparation from "./pages/ExamPreparation";
-import SetupProfile from "./pages/SetupProfile";
-import About from "./pages/About";
+import Home from "./pages/Home.js";
+import Notes from "./pages/Notes.js";
+import MyProfile from "./pages/MyProfile.js";
+import Chat from "./pages/Chat.js";
+import Login from "./pages/Login.js";
+import Signup from "./pages/Signup.js";
+import JobPreparation from "./pages/JobPreparation.js";
+import Quiz from "./pages/Quiz.js'";
+import ExamPreparation from "./pages/ExamPreparation.js";
+import SetupProfile from "./pages/SetupProfile.js";
+import About from "./pages/About.js";
 
 // Protected Route Wrapper
 const ProtectedRoute = ({ element }) => {
