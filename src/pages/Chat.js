@@ -11,7 +11,7 @@ import {
   FaStop,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { auth, db } from "../firebase";
+import { auth, db } from "../firebase.js";
 import { doc, updateDoc } from "firebase/firestore";
 
 const Chat = () => {

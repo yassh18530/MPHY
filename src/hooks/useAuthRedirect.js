@@ -1,7 +1,7 @@
 // src/hooks/useAuthRedirect.js
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../firebase.js";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const useAuthRedirect = () => {
