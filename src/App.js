@@ -9,7 +9,7 @@ import Chat from "./pages/Chat.js";
 import Login from "./pages/Login.js";
 import Signup from "./pages/Signup.js";
 import JobPreparation from "./pages/JobPreparation.js";
-import Quiz from "./pages/Quiz.js'";
+import Quiz from "./pages/Quiz.js";
 import ExamPreparation from "./pages/ExamPreparation.js";
 import SetupProfile from "./pages/SetupProfile.js";
 import About from "./pages/About.js";
