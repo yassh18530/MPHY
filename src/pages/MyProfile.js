@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar";
-import ProfileCard from "../components/ProfileCard";
-import { auth, db } from "../firebase";
+import Sidebar from "../components/Sidebar.js";
+import RightSidebar from "../components/RightSidebar.js";
+import ProfileCard from "../components/ProfileCard.js";
+import { auth, db } from "../firebase.js";
 import { doc, getDoc } from "firebase/firestore";
 
 const MyProfile = () => {

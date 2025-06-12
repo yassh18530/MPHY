@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar";
-import NotesCard from "../components/NotesCard";
+import Sidebar from "../components/Sidebar.js";
+import RightSidebar from "../components/RightSidebar.js";
+import NotesCard from "../components/NotesCard.js";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);

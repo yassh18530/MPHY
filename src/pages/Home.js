@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar";
+import Sidebar from "../components/Sidebar.js";
+import RightSidebar from "../components/RightSidebar.js";
 import { Link } from "react-router-dom";
 
 const Home = () => {

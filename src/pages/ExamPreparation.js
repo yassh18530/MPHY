@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar";
+import Sidebar from "../components/Sidebar.js";
+import RightSidebar from "../components/RightSidebar.js";
 
 const ExamPreparation = () => {
   const [exams, setExams] = useState([]);

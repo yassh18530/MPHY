@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "../components/Sidebar";
-import RightSidebar from "../components/RightSidebar";
+import Sidebar from "../components/Sidebar.js";
+import RightSidebar from "../components/RightSidebar.js";
 
 // Import images (if using `src/assets`)
 import manjiriImage from "../assets/manjiri.jpg";
