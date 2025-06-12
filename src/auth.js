@@ -1,6 +1,6 @@
 import { auth, db } from "./firebase.js"; // ✅ Import Firebase auth and Firestore
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc, getDoc } from "firebase/firestore";
+import { doc, setDoc, getDoc } from "/firestore";
 
 // ✅ Function to register a user
 export const registerUser = async (name, email, password) => {
