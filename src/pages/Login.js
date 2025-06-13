@@ -4,7 +4,7 @@ import { auth, db } from "../firebase.js";
 import { useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import loginBg from "../assets/login-bg.jpg";
-import { useAuthRedirect } from "../hooks/useAuthRedirect";
+import { useAuthRedirect } from "../hooks/useAuthRedirect.js";
 
 const Login = () => {
   const [email, setEmail] = useState("");
