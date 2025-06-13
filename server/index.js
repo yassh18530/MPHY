@@ -28,15 +28,22 @@ const openai = new OpenAI({
 // 🧠 Chat Endpoint
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
+  console.log("🟢 Chat request received:", message);
+
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: message }],
     });
-    const reply = completion.choices[0].message.content;
+
+    const reply = completion.choices?.[0]?.message?.content;
+    console.log("🔵 OpenAI response:", reply);
+
+    if (!reply) throw new Error("No reply from OpenAI");
+
     res.json({ reply });
   } catch (error) {
-    console.error("Chat Error:", error.message);
+    console.error("❌ Chat Error:", error);
     res.status(500).json({ error: "Failed to process message" });
   }
 });
@@ -55,7 +62,7 @@ app.get("/api/generate-quiz", async (req, res) => {
       temperature: 0.7,
     });
 
-    let content = completion.choices[0].message.content.trim();
+    let content = completion.choices?.[0]?.message?.content?.trim();
     let questions;
 
     try {
@@ -69,7 +76,7 @@ app.get("/api/generate-quiz", async (req, res) => {
 
     res.json({ questions });
   } catch (error) {
-    console.error("Quiz Error:", error.message);
+    console.error("❌ Quiz Error:", error.message);
     res.status(500).json({ error: "Failed to generate quiz" });
   }
 });
