@@ -30,20 +30,24 @@ app.post("/chat", async (req, res) => {
   const { message } = req.body;
   console.log("🟢 Chat request received:", message);
 
+  if (!message || typeof message !== "string") {
+    return res.status(400).json({ error: "Invalid message" });
+  }
+
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: [{ role: "user", content: message }],
     });
 
-    const reply = completion.choices?.[0]?.message?.content;
+    const reply = completion.choices?.[0]?.message?.content?.trim();
     console.log("🔵 OpenAI response:", reply);
 
-    if (!reply) throw new Error("No reply from OpenAI");
+    if (!reply) throw new Error("No reply received");
 
     res.json({ reply });
   } catch (error) {
-    console.error("❌ Chat Error:", error);
+    console.error("❌ Chat Error:", error.message);
     res.status(500).json({ error: "Failed to process message" });
   }
 });
@@ -81,14 +85,14 @@ app.get("/api/generate-quiz", async (req, res) => {
   }
 });
 
-// 🚀 Serve React Frontend (from build folder)
+// 🌐 Serve React Frontend
 app.use(express.static(path.join(__dirname, "../build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build", "index.html"));
 });
 
-// Start Server
+// 🚀 Start Server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
