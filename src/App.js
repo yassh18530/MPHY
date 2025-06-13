@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth/dist/index.esm.js";
 import { auth } from "./firebase.js"; 
 import Home from "./pages/Home.js";
 import Notes from "./pages/Notes.js";
